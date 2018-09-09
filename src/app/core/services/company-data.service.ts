@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -31,7 +31,9 @@ export class CompanyDataService {
     return Observable.throw(error);
   }
 
-  constructor(private http: Http) { }public getAllTodos() {
+  constructor(@Inject(Http) private http: Http) { }
+  
+  public getAllTodos() {
     // will use this.http.get()
     return this.http
     .get(API_URL + '/todos')

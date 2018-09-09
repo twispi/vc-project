@@ -1,11 +1,11 @@
 export interface ICompany {
 
-    _id: number,
+    id: number,
     owner_id: number,
     name: string,
     website: string,
     phone: string,
-    lifecycle_stage_id: number,
+    lifecycle_stage: number,
     industry_id: number,
     email: string,
     emp_count_id: number,
@@ -16,7 +16,7 @@ export interface ICompany {
 }
 
 export interface IProduct {
-    _id: number,
+    id: number,
     company_id: number,
     name: number,
     stage: number,
@@ -25,6 +25,11 @@ export interface IProduct {
     funding_status: number,
     type: number,
     industry: number,
+}
+
+export interface ILifecycle_Stage {
+    id: number,
+    name: string,
 }
 
 export interface IIndustry {

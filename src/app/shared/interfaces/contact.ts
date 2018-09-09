@@ -1,5 +1,5 @@
 export interface IContact {
-    _id: number,
+    id: number,
     company_id: number,
     firstName: string,
     lastName: string,
@@ -10,10 +10,11 @@ export interface IContact {
     city: string,
     type: number,
     email:string,
+    created_date
 }
 
 export interface IContactType {
-    _id: number,
+    id: number,
     title: string,
     description: string
 }

@@ -121,5 +121,116 @@
         "description": "user"
 
       }
+    ],
+    "lifecycle_stage": [
+      {
+        "id": 1,
+        "name": "lead",
+        "description": "a lead"
+      },
+      {
+        "id": 2,
+        "name": "prospect",
+        "description": "a prospect"
+      },
+      {
+        "id": 3,
+        "name": "customer",
+        "description": "a customer"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "firstName": "Sean",
+        "lastName": "Hamilton",
+        "phone": "403-473-3178",
+        "email": "hamiltonsean6@gmail.com",
+        "role": 1
+      },
+      {
+        "id": 2,
+        "firstName": "Jon",
+        "lastName": "Schmold",
+        "phone": "403-473-3178",
+        "email": "me@jschmold.ca",
+        "role": 1
+      }
+    ],
+    "companies": [
+      {
+      "id": 1,
+      "name": "venture co",
+      "phone": "403-473-3178",
+      "email": "hamiltonsean6@gmail.com",
+      "website": "https://www.google.ca",
+      "owner_id" : 1,
+      "lifecycle_stage": 1,
+      "emp_count_id": 1,
+      "industry_id" : 3,
+      "created_date": "2012-04-23T18:25:43.511Z",
+      "city": "calgary",
+      "country": "canada",
+      "province": "alberta"
+      },
+      {
+        "id": 2,
+        "name": "venture co",
+        "phone": "403-473-3178",
+        "email": "hamiltonsean6@gmail.com",
+        "website": "https://www.google.ca",
+        "owner_id" : 2,
+        "lifecycle_stage": 1,
+        "emp_count_id": 1,
+        "industry_id" : 3,
+        "created_date": "2012-04-23T18:25:43.511Z",
+        "city": "calgary",
+        "country": "canada",
+        "province": "alberta"
+      }
+    ],
+    "contacts": [
+      {
+      "id": 1,
+      "company_id": 1,
+      "firstName": "A",
+      "lastName": "B",
+      "phone": "403-473-3178",
+      "email": "hamiltonsean6@gmail.com",
+      "owner_id" : 1,
+      "created_date": "2012-04-23T18:25:43.511Z",
+      "city": "calgary",
+      "country": "canada",
+      "province": "alberta",
+      "type": 1
+      },
+      {
+        "id": 2,
+        "company_id": 1,
+        "firstName": "C",
+        "lastName": "R",
+        "phone": "403-123-3123",
+        "email": "test@example.com",
+        "owner_id" : 2,
+        "created_date": "2012-04-23T18:25:43.511Z",
+        "city": "victoria",
+        "country": "canada",
+        "province": "bc",
+        "type": 2
+        },
+        {
+          "id": 3,
+          "company_id": 2,
+          "firstName": "zzA",
+          "lastName": "zzB",
+          "phone": "403-473-1234",
+          "email": "blahblah@gmail.com",
+          "owner_id" : 1,
+          "created_date": "2012-04-23T18:25:43.511Z",
+          "city": "los angeles",
+          "country": "usa",
+          "province": "california",
+          "type": 1
+          }
     ]
   }

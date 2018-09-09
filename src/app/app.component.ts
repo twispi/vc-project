@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { CompanyCollectionService } from './shared/services/company-collection.service';
+import { MetaDataCollectionService } from './shared/services/meta-data-collection.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,10 @@ import { CompanyCollectionService } from './shared/services/company-collection.s
 })
 export class AppComponent implements OnInit {
   title = 'vc';
-  constructor(@Inject(CompanyCollectionService) private collSvc: CompanyCollectionService) {
+  constructor(@Inject(MetaDataCollectionService) private metaCollSvc: MetaDataCollectionService) {
 
   }
   ngOnInit() {
-    this.collSvc.getAllTodos().subscribe(obs => console.log(obs));
+    this.metaCollSvc.getAllActivityTypes().subscribe(obs => console.log(obs));
   }
 }

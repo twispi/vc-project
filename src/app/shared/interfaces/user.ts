@@ -1,5 +1,5 @@
 export interface IUser {
-    _id: number,
+    id: number,
     firstName: string,
     lastName: string,
     phone: string,
@@ -8,7 +8,7 @@ export interface IUser {
 }
 
 export interface IRole {
-    _id: number,
+    id: number,
     title: string,
     description: string,
 }

@@ -9,7 +9,6 @@ import { Http, HttpModule } from '@angular/http';
     HttpModule,
   ],
   providers: [
-    // Http,
     CompanyDataService
   ],
   declarations: []

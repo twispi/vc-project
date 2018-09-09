@@ -1,19 +1,125 @@
 {
-    "todos": [
+    "activity_types": [
       {
         "id": 1,
-        "title": "Read SitePoint article",
-        "complete": false
+        "name": "comment"
+
       },
       {
         "id": 2,
-        "title": "Clean inbox",
-        "complete": false
+        "name": "phone"
       },
       {
         "id": 3,
-        "title": "Make restaurant reservation",
-        "complete": false
+        "name": "email"
+      }
+    ],
+    "industries": [
+      {
+        "id": 1,
+        "industry_name": "tech"
+
+      },
+      {
+        "id": 2,
+        "industry_name": "marketing"
+      },
+      {
+        "id": 3,
+        "industry_name": "communications"
+      }
+    ],
+    "product_funding_status": [
+      {
+        "id": 1,
+        "name": "seed",
+        "description": "first round"
+      },
+      {
+        "id": 2,
+        "name": "series - a",
+        "description": "second round"
+
+      },
+      {
+        "id": 3,
+        "name": "series - b",
+        "description": "third round"
+
+      }
+    ],
+    "product_type": [
+      {
+        "id": 1,
+        "name": "app",
+        "description": "application"
+      },
+      {
+        "id": 2,
+        "name": "service",
+        "description": "service"
+
+      },
+      {
+        "id": 3,
+        "name": "ecommerce",
+        "description": "ecommerce"
+
+      }
+      
+    ],
+    "product_stage": [
+      {
+        "id": 1,
+        "name": "conception",
+        "description": "new idea"
+      },
+      {
+        "id": 2,
+        "name": "POC",
+        "description": "proof of concept"
+
+      },
+      {
+        "id": 3,
+        "name": "in dev",
+        "description": "active development"
+      },
+      {
+        "id": 4,
+        "name": "ready to launch",
+        "description": "ready to go"
+      }
+    ], 
+    "contact_type": [
+      {
+        "id": 1,
+        "name": "decision-maker",
+        "description": "core"
+      },
+      {
+        "id": 2,
+        "name": "influencer",
+        "description": "investment"
+
+      },
+      {
+        "id": 3,
+        "name": "contact",
+        "description": "peripheral"
+      }
+    ],
+    "user_role": [
+      {
+        "id": 1,
+        "name": "admin",
+        "description": "administrator"
+      },
+      {
+        "id": 2,
+        "name": "user",
+        "description": "user"
+
       }
     ]
   }

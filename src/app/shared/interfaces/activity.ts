@@ -1,5 +1,5 @@
 export interface IActivity {
-    _id: number,
+    id: number,
     company_id: number,
     owner_id: number,
     type: number,
@@ -7,6 +7,6 @@ export interface IActivity {
 }
 
 export interface IActivityType {
-    _id: number,
+    id: number,
     name: string,
 }

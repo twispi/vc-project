@@ -28,24 +28,24 @@ export interface IProduct {
 }
 
 export interface IIndustry {
-    _id: number,
-    title: string,
+    id: number,
+    industry_name: string,
 }
 
 export interface IProductStage {
-    _id: number,
-    title: string,
+    id: number,
+    name: string,
     description: string,
 }
 
 export interface IProductFundingStatus {
-    _id: number,
-    title: string,
+    id: number,
+    name: string,
     description: string,
 }
 
 export interface IProductType {
-    _id: number,
-    title: string,
+    id: number,
+    name: string,
     description: string,
 }

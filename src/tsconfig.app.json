@@ -6,11 +6,6 @@
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts",
-    "**/*.tns.ts",
-    "**/*.android.ts",
-    "**/*.ios.ts",
-    "./main.ns.aot.ts",
-    "./main.ns.ts"
+    "**/*.spec.ts"
   ]
 }

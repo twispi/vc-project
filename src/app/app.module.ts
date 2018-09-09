@@ -44,7 +44,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    SharedModule,
+    SharedModule.forRoot(),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
   ],
   providers: [],

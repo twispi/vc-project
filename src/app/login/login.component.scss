@@ -1,0 +1,26 @@
+:host() {
+  display: grid;
+  height: 100vh;
+  mat-card {
+    width: 90vw;
+    max-width: 480pt;
+    align-self: center;
+    justify-self: center;
+    mat-card-title {
+      position: absolute;
+      color: whitesmoke;
+      top: 0;
+      right: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    mat-card-actions {
+      align-self: flex-end;
+    }
+    input {
+      background-color: white;
+    }
+  }
+}

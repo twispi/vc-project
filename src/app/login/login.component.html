@@ -1,13 +1,18 @@
-
-<h1>Company!</h1>
-<form [formGroup]="loginForm">
-<mat-form-field appearance="outline">
-    <mat-label>Enter your username</mat-label>
-    <input [formControl]="userName" matInput placeholder="username">
-</mat-form-field>
-<mat-form-field appearance="outline">
-    <mat-label>Enter your password</mat-label>
-    <input [formControl]="password" matInput placeholder="password">
-</mat-form-field>
-
-</form>
+<mat-card>
+  <video mat-card-image autoplay muted loop id="myVideo">
+    <source src="/assets/stockholm.mp4" type="video/mp4">
+  </video>
+  <mat-card-title color="primary">COMPANY</mat-card-title>
+  <form [formGroup]="loginForm">
+    <mat-form-field appearance="outline">
+      <!-- <mat-label>Enter your username</mat-label> -->
+      <input [formControl]="userName" matInput placeholder="username">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <!-- <mat-label>Enter your password</mat-label> -->
+      <input [formControl]="password" matInput placeholder="password">
+    </mat-form-field>
+    <mat-card-actions><button mat-flat-button color="accent">Login</button> </mat-card-actions>
+  </form>
+  <mat-card-footer><button mat-button color="basic">About Us</button> </mat-card-footer>
+</mat-card>

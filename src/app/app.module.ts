@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxUiLoaderModule, NgxUiLoaderConfig } from 'ngx-ui-loader';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { Http } from '@angular/http';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
@@ -38,10 +39,12 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,

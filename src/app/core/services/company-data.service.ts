@@ -3,6 +3,7 @@ import { environment } from '../../../environments/environment';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { ICompany } from '../../shared/interfaces/company';
 
 const API_URL = environment.apiUrl;
 interface IToDo {
@@ -33,15 +34,13 @@ export class CompanyDataService {
 
   constructor(@Inject(Http) private http: Http) { }
   
-  public getAllTodos() {
-    // will use this.http.get()
+  public getAllCompanies() {
     return this.http
-    .get(API_URL + '/todos')
+    .get(API_URL + '/lifecycle_stage')
     .pipe(map(response => {
-      const todos = response.json();
-      return todos.map(todo => Object.create(todo));
+      const items = response.json();
+      return items.map((ind: ICompany) => ind);
     }))
-    // .catch(this.handleError);
   }
 
   // API: POST /todos

@@ -29,7 +29,7 @@ export class CompanyCollectionService {
 
   // Simulate GET /todos
   getAllTodos(): Observable<any[]> {
-    return this.api.getAllTodos();
+    return this.api.getAllCompanies();
   }
 
   // Simulate GET /todos/:id

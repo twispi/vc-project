@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CompanyCollectionService } from './services/company-collection.service'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { LoginComponent } from '../login/login.component';
 import {MatFormFieldModule, MatLabel, MatFormField, MatHint } from '@angular/material/form-field';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -37,11 +35,13 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
+import { LoginComponent } from './login/login.component';
 import { CoreModule } from '../core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    CoreModule,
     MatFormFieldModule,
     FormsModule,    
     ReactiveFormsModule,
@@ -111,6 +111,7 @@ import { CoreModule } from '../core/core.module';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    CoreModule,
   ],
 })
 export class SharedModule { 

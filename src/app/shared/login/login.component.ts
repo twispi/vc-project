@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-import { AuthService } from '../core/services/auth.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../core/services/auth.service';
 
 
 @Component({
@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
   login() {
     let creds = this.loginForm.getRawValue();
     console.log(creds);
-    this.router.navigate(['/dashboard']);
+    console.log(this.router);
+    this.router.navigate(['dashboard/']);
     this.authSvc.login(creds.userName, creds.password);
   }
 

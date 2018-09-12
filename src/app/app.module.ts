@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxUiLoaderModule, NgxUiLoaderConfig } from 'ngx-ui-loader';
-import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 
@@ -43,14 +42,11 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule,
     SharedModule.forRoot(),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
   ],
   providers: [],
   exports: [
-    CoreModule,
-    SharedModule,
   ],
   bootstrap: [AppComponent]
 })

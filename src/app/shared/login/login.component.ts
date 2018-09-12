@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     let creds = this.loginForm.getRawValue();
     console.log(creds);
     console.log(this.router);
-    this.router.navigate(['dashboard/']);
+    this.router.navigate(['/dashboard']);
     this.authSvc.login(creds.userName, creds.password);
   }
 

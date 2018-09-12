@@ -37,10 +37,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from '../core/core.module';
+import { SharedRoutingModule } from './shared-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedRoutingModule,
     CoreModule,
     MatFormFieldModule,
     FormsModule,    

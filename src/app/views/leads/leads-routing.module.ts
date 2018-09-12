@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LeadsComponent } from './leads.component';
 
 const routes: Routes = [
-  { path: '', component: LeadsComponent,
-  children: [{
-    path: '',
-    component: LeadsComponent,
-}]}
+  { path: '', component: LeadsComponent,}
+  // children: [
+    // {
+    // path: '',
+    // component: LeadsComponent,
+  // }
+// ]}
 
 ];
 

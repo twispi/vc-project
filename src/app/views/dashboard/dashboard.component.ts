@@ -12,6 +12,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     // this.authSvc.login('a', 'a');
+    this.authSvc.resume();
+    console.log('run');
   }
 
 }

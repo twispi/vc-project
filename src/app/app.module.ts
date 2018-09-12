@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxUiLoaderModule, NgxUiLoaderConfig } from 'ngx-ui-loader';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { LoginComponent } from './login/login.component';
 
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
@@ -49,6 +48,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
   ],
   providers: [],
+  exports: [
+    CoreModule,
+    SharedModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

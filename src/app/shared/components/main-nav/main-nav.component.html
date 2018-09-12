@@ -1,27 +1,89 @@
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport="true"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="!(isHandset$ | async)">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
+
+
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard">Link 1</a>
-      <a mat-list-item routerLink="/leads">Link 2</a>
-      <a mat-list-item routerLink="/contacts">Link 3</a>
+      <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voicemail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu> -->
+      <mat-expansion-panel expanded="true" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Leads & Contacts
+          </mat-panel-title>
+          <!-- <mat-panel-description>
+                      Leads & Contacts -->
+          <mat-icon color="accent">add_circle</mat-icon>
+          <!-- </mat-panel-description> -->
+        </mat-expansion-panel-header>
+
+        <mat-list-item class="mat-icon-list">
+            <button mat-button color="primary"><mat-icon>person_add</mat-icon>New Lead</button>
+
+        </mat-list-item>
+
+        <mat-list-item class="mat-icon-list">
+            <button mat-button color="primary"><mat-icon>note_add</mat-icon>New Activity</button>
+        </mat-list-item>
+
+
+        <mat-list-item class="mat-icon-list">
+            <button mat-button color="primary"><mat-icon>search</mat-icon>Search</button>
+
+        </mat-list-item>
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          Navigation
+        </mat-expansion-panel-header>
+        <a mat-list-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>Dashboard
+        </a>
+
+        <a mat-list-item routerLink="/leads">
+          <mat-icon>assignment_ind</mat-icon>Leads
+        </a>
+
+
+        <a mat-list-item routerLink="/contacts">
+          <mat-icon>contacts</mat-icon>Contacts
+        </a>
+
+
+        <a mat-list-item routerLink="/companies">
+          <mat-icon>business</mat-icon>Companies
+        </a>
+
+
+        <a mat-list-item routerLink="/products">
+          <mat-icon>devices_other</mat-icon>Products
+        </a>
+      </mat-expansion-panel>
+
     </mat-nav-list>
     <mat-divider></mat-divider>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" *ngIf="isAuth">
-      <button 
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Veraroth</span>
@@ -29,9 +91,9 @@
     <ng-content select="[container-content]">
 
     </ng-content>
-    <app-login *ngIf="!isAuth"></app-login>
+    <app-login *ngIf="show"></app-login>
 
     <!-- Add Content Here -->
-    
+
   </mat-sidenav-content>
 </mat-sidenav-container>

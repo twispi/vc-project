@@ -4,9 +4,37 @@
 
 .sidenav {
   width: 200pt;
+  .example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-list {
+
+
+.mat-icon-list {
+  flex-basis: 0;
+
+  .icon-buttons {
+    justify-content: space-between;
+    align-items: center;
+    mat-list-item {
+      justify-content: flex-end;
+    }
+  }
+}
+}
+
+
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
 }
+
+

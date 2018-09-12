@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       userName: ['', Validators.required],
       password: ['', Validators.required],
     });
+    this.authSvc.resume();
   }
 
   login() {

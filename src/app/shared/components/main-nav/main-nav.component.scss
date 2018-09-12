@@ -1,40 +1,57 @@
+@import '~@angular/material/theming';
+
+
 .sidenav-container {
   height: 100%;
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 30pt 0pt;
+  .card-container {
+    width: 90vw;
+  }
+  }
 }
 
 .sidenav {
   width: 200pt;
-  .example-headers-align .mat-expansion-panel-header-title, 
-.example-headers-align .mat-expansion-panel-header-description {
-  flex-basis: 0;
-}
 
-.example-headers-align .mat-expansion-panel-header-description {
-  justify-content: space-between;
-  align-items: center;
-}
-.icon-list {
+  .example-headers-align .mat-expansion-panel-header-title,
+  .example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+  }
 
-
-.mat-icon-list {
-  flex-basis: 0;
-
-  .icon-buttons {
+  .example-headers-align .mat-expansion-panel-header-description {
     justify-content: space-between;
     align-items: center;
-    mat-list-item {
-      justify-content: flex-end;
+  }
+
+  .icon-list {
+
+
+    .mat-icon-list {
+      flex-basis: 0;
+
+      .icon-buttons {
+        justify-content: space-between;
+        align-items: center;
+
+        mat-list-item {
+          justify-content: flex-end;
+        }
+      }
     }
   }
-}
-}
 
 
 }
 
 .mat-toolbar.mat-primary {
+  @include mat-elevation(8);
+
   position: sticky;
   top: 0;
+  z-index: 100 !important;
+
 }
-
-

@@ -5,10 +5,10 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent, pathMatch: 'full' },
-  {  
+  {
     // { path: 'home', redirectTo: '/home', pathMatch: 'full' },
     path: '', redirectTo: '/', pathMatch: 'full'},
-    { path: '', component: HomeComponent, 
+    { path: '', component: HomeComponent,
     children: [
       {
         path: 'dashboard',
@@ -48,15 +48,15 @@ const routes: Routes = [
     {
       path: 'contacts', redirectTo: '/contacts'
     },
-    
-    
+
+
 
   ]
  },
 
 
 
-  
+
 
   // {
   //   path: 'leads',
@@ -66,18 +66,18 @@ const routes: Routes = [
   //   path: 'companies',
   //   loadChildren: './views/companies/companies.module#CompaniesModule',
   // },
-  
+
   // {
   //   path: 'contacts',
   //   loadChildren: './views/contacts.module#ContactsModule',
   // },
-  
+
   // {
   //   path: 'products',
   //   loadChildren: './views/products.module#ProductsModule',
   // },
     { path: '**', redirectTo: '' }
-  ]
+  ];
 
 
 

@@ -16,12 +16,12 @@ export class MainNavComponent {
     .pipe(
       map(result => result.matches)
     );
-    
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     @Inject(AuthService) private authSvc: AuthService,
    ) {
-     this.auth.subscribe(obs =>this.isAuth = obs);
+     this.auth.subscribe(obs => this.isAuth = obs);
    }
-  
+
   }

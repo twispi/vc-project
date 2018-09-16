@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CompanyCollectionService } from './services/company-collection.service'
+import { CompanyCollectionService } from './services/company-collection.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatFormFieldModule, MatLabel, MatFormField, MatHint } from '@angular/material/form-field';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
@@ -38,6 +38,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from '../core/core.module';
 import { SharedRoutingModule } from './shared-routing.module';
+import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { AddActivityComponent } from './components/add-activity/add-activity.component';
+import { AddCompanyComponent } from './components/add-company/add-company.component';
+import { AddLeadComponent } from './components/add-lead/add-lead.component';
+import { ViewContactComponent } from './components/view-contact/view-contact.component';
+import { ViewCompanyComponent } from './components/view-company/view-company.component';
+import { ViewProspectComponent } from './components/view-prospect/view-prospect.component';
+import { ViewActivityComponent } from './components/view-activity/view-activity.component';
+import { ViewLeadComponent } from './components/view-lead/view-lead.component';
 
 @NgModule({
   imports: [
@@ -45,7 +54,7 @@ import { SharedRoutingModule } from './shared-routing.module';
     SharedRoutingModule,
     CoreModule,
     MatFormFieldModule,
-    FormsModule,    
+    FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -82,7 +91,19 @@ import { SharedRoutingModule } from './shared-routing.module';
     MatPaginatorModule,
   ],
   providers: [CompanyCollectionService, ],
-  declarations: [LoginComponent, MainNavComponent],
+  declarations: [
+    LoginComponent,
+    MainNavComponent,
+    AddContactComponent,
+    AddActivityComponent,
+    AddCompanyComponent,
+    AddLeadComponent,
+    ViewLeadComponent,
+    ViewContactComponent,
+    ViewCompanyComponent,
+    ViewProspectComponent,
+    ViewActivityComponent
+  ],
   exports: [
     MatLabel, MatFormField, MatHint, LoginComponent, MatInput, MainNavComponent,
     MatInputModule,
@@ -114,13 +135,20 @@ import { SharedRoutingModule } from './shared-routing.module';
     MatSortModule,
     MatPaginatorModule,
     CoreModule,
+    AddContactComponent,
+    AddActivityComponent,
+    AddCompanyComponent,
+    AddLeadComponent,
+    ViewLeadComponent,
+    ViewContactComponent,
+    ViewActivityComponent,
   ],
 })
-export class SharedModule { 
+export class SharedModule {
   static forRoot() {
     return {
       ngModule: SharedModule,
       providers: [CompanyCollectionService, ReactiveFormsModule],
-    }
+    };
   }
 }

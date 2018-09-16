@@ -11,13 +11,12 @@ const API_URL = environment.apiUrl;
 export class UserDataService {
 
   constructor(private http: Http) {}
-    
     public getAllUsers() {
     return this.http
     .get(API_URL + '/users')
     .pipe(map(response => {
       const items = response.json();
       return items.map((ind: IUser) => ind);
-    }))
-  } 
+    }));
+  }
 }
